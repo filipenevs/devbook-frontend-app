@@ -1,5 +1,6 @@
 {
   "files.exclude": {
+    // These files do not appear in the VIsual Studio Code interface
     "node_modules": true,
     ".gitignore": true,
     "package.json": true,

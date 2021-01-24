@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'Rubik';
+  src: url(./Assets/fonts/Rubik-VariableFont_wght.ttf);
+}
+
+body {
+  font-family: Rubik, Helvetica, Arial, sans-serif;
+  /* Header padding */
+  padding-top: 5rem;
+}
+
+.container {
+  max-width: 60rem;
+  margin: 0 auto;
+}

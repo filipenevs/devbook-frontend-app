@@ -1,11 +1,20 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from './Header.module.css';
+import { ReactComponent as Logo } from '../Assets/logo.svg';
 
 const Header = () => {
   return (
-    <div>
-      <p>Header</p>
-    </div>
+    <header className={styles.header}>
+      <nav className={`${styles.nav} container`}>
+        <Link to="/">
+          <Logo className={styles.logo} />
+        </Link>
+        <Link to="/login" className={styles.loginButton}>
+          LOGIN
+        </Link>
+      </nav>
+    </header>
   );
 };
 
