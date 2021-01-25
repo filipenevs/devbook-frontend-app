@@ -1,0 +1,13 @@
+.text {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.text::after {
+  display: block;
+  content: '';
+  background-color: var(--mainColor);
+  border-radius: 2px;
+  height: 4px;
+  z-index: -1;
+}

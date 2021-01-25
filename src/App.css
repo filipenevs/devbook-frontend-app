@@ -1,3 +1,7 @@
+:root {
+  --mainColor: rgb(155, 93, 229);
+}
+
 @font-face {
   font-family: 'Rubik';
   src: url(./Assets/fonts/Rubik-VariableFont_wght.ttf);
@@ -6,7 +10,8 @@
 body {
   font-family: Rubik, Helvetica, Arial, sans-serif;
   /* Header padding */
-  padding-top: 5rem;
+  padding-top: 5rem !important;
+  z-index: 1;
 }
 
 .container {
