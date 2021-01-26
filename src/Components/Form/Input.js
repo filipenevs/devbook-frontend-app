@@ -10,11 +10,12 @@ const Input = ({ label, id, type, value, error, onChange, onBlur }) => {
       <input
         id={id}
         name={id}
-        className={`${styles.input} ${error && styles.inputError}`}
+        className={styles.input}
         type={type}
         value={value}
         onChange={onChange}
         onBlur={onBlur}
+        style={error && { borderColor: 'rgb(220, 0, 0)' }}
       />
       <p className={styles.error}>{true && error}</p>
     </div>

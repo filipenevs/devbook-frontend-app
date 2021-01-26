@@ -18,23 +18,3 @@
   width: 3.5rem;
   height: 3.5rem;
 }
-
-.loginButton {
-  font-weight: 600;
-  letter-spacing: 1px;
-  padding: 1rem 2rem;
-  border: 1px solid rgb(230, 230, 230);
-  border-radius: 4px;
-  transition: 150ms all ease;
-  background-color: rgb(245, 245, 245);
-  color: rgb(0, 0, 0);
-}
-
-.loginButton:hover {
-  background-color: rgb(225, 225, 225);
-  border-color: var(--mainColor);
-}
-
-.loginButton:visited {
-  color: initial;
-}

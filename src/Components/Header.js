@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Header.module.css';
 import { ReactComponent as Logo } from '../Assets/logo.svg';
+import Button from './Form/Button';
 
 const Header = () => {
   return (
@@ -10,8 +11,8 @@ const Header = () => {
         <Link to="/">
           <Logo className={styles.logo} />
         </Link>
-        <Link to="/login" className={styles.loginButton}>
-          LOGIN
+        <Link to="/login">
+          <Button>LOGIN</Button>
         </Link>
       </nav>
     </header>
