@@ -23,7 +23,7 @@ const RegisterForm = () => {
   }
 
   return (
-    <div className="container">
+    <div className="container translateAnimation">
       <div className={styles.formDiv}>
         <Title>Register</Title>
         <form onSubmit={handleSubmit}>

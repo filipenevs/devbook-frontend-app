@@ -19,3 +19,18 @@ body {
   margin: 0 auto;
   padding: 0 2rem;
 }
+
+.translateAnimation {
+  opacity: 0;
+  transform: translateY(-3rem);
+  animation-name: show;
+  animation-duration: 200ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes show {
+  to {
+    transform: initial;
+    opacity: 1;
+  }
+}

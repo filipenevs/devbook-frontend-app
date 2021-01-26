@@ -22,7 +22,7 @@ const LoginForm = () => {
   }
 
   return (
-    <div className="container">
+    <div className="container translateAnimation">
       <div className={styles.formDiv}>
         <Title>Login</Title>
         <form onSubmit={handleSubmit}>

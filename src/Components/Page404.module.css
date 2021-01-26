@@ -1,7 +1,0 @@
-.container > img,
-.container > div {
-  display: block;
-  max-width: 40rem;
-  margin: 1rem auto;
-  text-align: center;
-}
