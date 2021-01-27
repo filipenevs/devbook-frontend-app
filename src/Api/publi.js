@@ -5,6 +5,24 @@
  */
 export const PATH_API_URL = '127.0.0.1:3003/publis';
 
+export function PUBLI_GET() {
+  return {
+    url: PATH_API_URL + '/',
+    options: {
+      method: 'GET',
+    },
+  };
+}
+
+export function TAGS_GET() {
+  return {
+    url: PATH_API_URL + '/',
+    options: {
+      method: 'GET',
+    },
+  };
+}
+
 export function PUBLI_POST(body, token) {
   return {
     url: PATH_API_URL + '/',
@@ -19,7 +37,7 @@ export function PUBLI_POST(body, token) {
   };
 }
 
-export function PUBLI_DELETE(body, token) {
+export function PUBLI_DELETE(token) {
   return {
     url: PATH_API_URL + '/',
     options: {

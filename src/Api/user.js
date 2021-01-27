@@ -5,6 +5,18 @@
  */
 export const PATH_API_URL = '127.0.0.1:3003/users';
 
+export function USER_GET(token) {
+  return {
+    url: PATH_API_URL + '/',
+    options: {
+      method: 'GET',
+      headers: {
+        Authorization: 'Bearer ' + token,
+      },
+    },
+  };
+}
+
 export function USER_POST(body) {
   return {
     url: PATH_API_URL + '/',

@@ -7,10 +7,14 @@
   src: url(./Assets/fonts/Rubik-VariableFont_wght.ttf);
 }
 
+*,
 body {
   font-family: Rubik, Helvetica, Arial, sans-serif;
+}
+
+body {
   /* Header padding */
-  padding-top: 5rem !important;
+  padding-top: 6rem;
   z-index: 1;
 }
 
@@ -24,7 +28,7 @@ body {
   opacity: 0;
   transform: translateY(-3rem);
   animation-name: show;
-  animation-duration: 200ms;
+  animation-duration: 175ms;
   animation-fill-mode: forwards;
 }
 
