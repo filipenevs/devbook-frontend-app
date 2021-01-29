@@ -5,6 +5,7 @@ import useForm from '../../Hooks/useForm';
 import Input from '../Form/Input';
 import Button from '../Form/Button';
 import Title from '../Title';
+import { AUTH_POST } from '../../Api/user';
 
 const LoginForm = () => {
   const email = useForm('email');
@@ -14,10 +15,25 @@ const LoginForm = () => {
     window.scrollTo(0, 0);
   }
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
     if (email.validate() && password.validate()) {
-      alert('logging');
+      const { url, options } = AUTH_POST({
+        email: email.value,
+        password: password.value,
+      });
+
+      /* EN: In the future they will be more beautiful Modals
+       * PT-BR: Futuramente serão modais mais bonitos aqui
+       */
+      const response = await fetch(url, options);
+      const responseJson = await response.json();
+      if (response.status === 200) {
+        alert('logging');
+        console.log(responseJson);
+      } else {
+        alert(responseJson.error);
+      }
     }
   }
 

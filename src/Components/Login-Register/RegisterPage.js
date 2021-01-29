@@ -5,6 +5,7 @@ import useForm from '../../Hooks/useForm';
 import Input from '../Form/Input';
 import Button from '../Form/Button';
 import Title from '../Title';
+import { USER_POST } from '../../Api/user';
 
 const RegisterForm = () => {
   const name = useForm('name');
@@ -15,10 +16,26 @@ const RegisterForm = () => {
     window.scrollTo(0, 0);
   }
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
     if (name.validate() && email.validate() && password.validate()) {
-      alert('signing');
+      const { url, options } = USER_POST({
+        name: name.value,
+        email: email.value,
+        password: password.value,
+      });
+
+      /* EN: In the future they will be more beautiful Modals
+       * PT-BR: Futuramente serão modais mais bonitos aqui
+       */
+      const response = await fetch(url, options);
+      const responseJson = await response.json();
+      if (response.status === 201) {
+        alert('registered');
+        console.log(responseJson);
+      } else {
+        alert(responseJson.error);
+      }
     }
   }
 

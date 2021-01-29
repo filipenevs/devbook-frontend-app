@@ -3,7 +3,7 @@
  *
  *  > Api model: https://github.com/filipenevs/rest-api-backend
  */
-export const PATH_API_URL = '127.0.0.1:3003/users';
+export const PATH_API_URL = 'http://127.0.0.1:3003/users';
 
 export function USER_GET(token) {
   return {
