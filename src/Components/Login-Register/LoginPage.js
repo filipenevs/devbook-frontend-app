@@ -1,10 +1,12 @@
 import React from 'react';
+import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import styles from './LoginPage.module.css';
 import useForm from '../../Hooks/useForm';
+import FormDiv from './FormDiv';
 import Input from '../Form/Input';
 import Button from '../Button';
 import Title from '../Title';
+import AlternateSection from './AlternateSection';
 import { AUTH_POST } from '../../Api/user';
 
 const LoginForm = () => {
@@ -39,20 +41,20 @@ const LoginForm = () => {
 
   return (
     <section className="container translateAnimation">
-      <div className={styles.formDiv}>
+      <FormDiv>
         <Title>Login</Title>
         <form onSubmit={handleSubmit}>
           <Input label="Email" id="email" type="email" {...email} />
           <Input label="Password" id="password" type="password" {...password} />
           <Button>Sign In</Button>
         </form>
-        <div className={styles.registerSection}>
-          <div className={styles.registerText}>Not have an account yet?</div>
+        <AlternateSection>
+          <div>Not have an account yet?</div>
           <Link to="/register">
             <Button onClick={scrollTop}>Register</Button>
           </Link>
-        </div>
-      </div>
+        </AlternateSection>
+      </FormDiv>
     </section>
   );
 };

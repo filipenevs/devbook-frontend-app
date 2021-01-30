@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import styles from './RegisterPage.module.css';
 import useForm from '../../Hooks/useForm';
+import FormDiv from './FormDiv';
 import Input from '../Form/Input';
 import Button from '../Button';
 import Title from '../Title';
+import AlternateSection from './AlternateSection';
 import { USER_POST } from '../../Api/user';
 
 const RegisterForm = () => {
@@ -41,7 +42,7 @@ const RegisterForm = () => {
 
   return (
     <section className="container translateAnimation">
-      <div className={styles.formDiv}>
+      <FormDiv>
         <Title>Register</Title>
         <form onSubmit={handleSubmit}>
           <Input label="Name" id="name" type="text" {...name} />
@@ -49,13 +50,13 @@ const RegisterForm = () => {
           <Input label="Password" id="password" type="password" {...password} />
           <Button>Sign Up</Button>
         </form>
-        <div className={styles.loginSection}>
-          <div className={styles.loginText}>Already have an account?</div>
+        <AlternateSection>
+          <div>Already have an account?</div>
           <Link to="/login">
             <Button onClick={scrollTop}>Login</Button>
           </Link>
-        </div>
-      </div>
+        </AlternateSection>
+      </FormDiv>
     </section>
   );
 };
