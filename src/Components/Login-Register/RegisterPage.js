@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import styles from './RegisterPage.module.css';
 import useForm from '../../Hooks/useForm';
 import Input from '../Form/Input';
-import Button from '../Form/Button';
+import Button from '../Button';
 import Title from '../Title';
 import { USER_POST } from '../../Api/user';
 

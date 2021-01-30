@@ -1,13 +1,17 @@
 import React from 'react';
-import styles from './Home.module.css';
+import styled from 'styled-components';
 import Title from './Title';
+
+const TitleDiv = styled.div`
+  margin: 3rem 0;
+`;
 
 const Home = () => {
   return (
     <section className="container translateAnimation">
-      <div className={styles.titleDiv}>
+      <TitleDiv>
         <Title>Publications</Title>
-      </div>
+      </TitleDiv>
     </section>
   );
 };

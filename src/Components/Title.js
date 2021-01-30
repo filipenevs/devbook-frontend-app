@@ -1,8 +1,17 @@
-import React from 'react';
-import styles from './Title.module.css';
+import styled from 'styled-components';
 
-const Title = ({ children }) => {
-  return <span className={styles.text}>{children}</span>;
-};
+const Title = styled.span`
+  font-size: 2rem;
+  font-weight: bold;
+
+  &::after {
+    display: block;
+    content: '';
+    background-color: var(--mainColor);
+    border-radius: 2px;
+    height: 4px;
+    z-index: -1;
+  }
+`;
 
 export default Title;
